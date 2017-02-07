@@ -20,3 +20,4 @@ WORKDIR /filebeat
 ADD entrypoint.sh /filebeat/entrypoint.sh
 
 ENTRYPOINT /filebeat/entrypoint.sh
+CMD ["/filebeat/filebeat", "-e", "*", "/filebeat/filebeat.yml"]
