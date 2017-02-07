@@ -1,0 +1,23 @@
+filebeat:
+  # List of prospectors to fetch data.
+  prospectors:
+    -
+      paths:
+        - "/var/log/syslog"
+      input_type: log
+      document_type: syslog
+
+output.logstash:
+  # Logstash as output
+  enabled: true
+  #hosts: ["logstash:5044"]
+  hosts: ["LOGSTASH_HOST"]
+  index: filebeat
+
+  
+#output.elasticsearch:
+#  enabled: true
+#  # Scheme and port can be left out and will be set to the default (http and 9200)
+#  # In case you specify and additional path, the scheme is required: http://localhost:9200/path
+#  hosts: ["${ELASTICSEARCH_URL:localhost}"]
+#  index: filebeat
