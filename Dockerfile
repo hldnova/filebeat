@@ -18,6 +18,7 @@ RUN curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-${
 WORKDIR /filebeat
 
 ADD entrypoint.sh /filebeat/entrypoint.sh
+RUN chmod +x /filebeat/entrypoint.sh
 
 ENTRYPOINT /filebeat/entrypoint.sh
 CMD ["/filebeat/filebeat", "-e", "*", "/filebeat/filebeat.yml"]
