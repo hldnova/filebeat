@@ -20,4 +20,4 @@ COPY entrypoint.sh /filebeat/entrypoint.sh
 COPY filebeat.yml /filebeat/filebeat.yml
 
 ENTRYPOINT ["/filebeat/entrypoint.sh"]
-CMD ["/filebeat/filebeat", "-e", "*", "/filebeat/filebeat-out.yml"]
+CMD ["/filebeat/filebeat", "-e", "-v", "-c", "/filebeat/filebeat-out.yml"]
