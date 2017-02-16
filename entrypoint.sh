@@ -2,6 +2,6 @@
 set -e
 
 # Render config file
-cat filebeat.yml.tmp | sed "s|LOGSTASH_HOST|${LOGSTASH_HOST}|g" | sed "s|LOGSTASH_PORT|${LOGSTASH_PORT}|g" > filebeat.yml
+cat filebeat.yml | sed "s|LOGSTASH_HOSTS|${LOGSTASH_HOSTS}|g" | sed "s|ELASTICSEARCH_HOSTS|${ELASTICSEARCH_HOSTS}|g" > filebeat-out.yml
 
 exec "$@"

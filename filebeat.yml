@@ -12,5 +12,6 @@ output:
     # Logstash as output
     enabled: true
     #hosts: ["logstash:5044"]
-    hosts: ["10.247.134.71:5044"]
+    # set the env to "1.1.1.1:5044" or "1.1.1.1:5044","2.2.2.2:5044" for multiple logstash.
+    hosts: [LOGSTASH_HOSTS]
     index: filebeat
