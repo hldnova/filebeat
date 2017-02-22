@@ -11,7 +11,11 @@ output:
   logstash:
     # Logstash as output
     enabled: true
-    #hosts: ["logstash:5044"]
-    # set the env to "1.1.1.1:5044" or "1.1.1.1:5044","2.2.2.2:5044" for multiple logstash.
-    hosts: [LOGSTASH_HOSTS]
+    hosts: ["lglca071:5044"]
     index: filebeat
+
+  #elasticsearch:
+  #  # elasticsearch as output
+  #  enabled: true
+  #  hosts: ["localhost:9200"]
+  #  index: filebeat
