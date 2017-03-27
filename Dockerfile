@@ -1,7 +1,7 @@
 FROM frolvlad/alpine-glibc
 MAINTAINER lida.he@dell.com
 
-ENV FILEBEAT_VERSION=5.2.0
+ENV FILEBEAT_VERSION=5.2.2
 
 RUN apk add --no-cache \
       ca-certificates \
